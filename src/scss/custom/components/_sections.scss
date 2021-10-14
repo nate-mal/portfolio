@@ -1,0 +1,16 @@
+/* ::::::::::::::::::::::::::::::::
+   Main Sections
+::::::::::::::::::::::::::::::::::::*/
+section {
+  min-height: 100vh;
+  background-color: $main-theme-color;
+  color: $main-text-color;
+}
+
+//::::::Hero Section::::::::::::::::::://
+
+#avatar {
+  max-height: 100vh;
+  max-width: 100%;
+  mix-blend-mode: soft-light;
+}
