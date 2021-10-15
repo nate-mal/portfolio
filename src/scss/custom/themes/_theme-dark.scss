@@ -1,0 +1,20 @@
+$theme-dark: (
+  section: (
+    bg: #0b0a27,
+    color: #fff,
+  ),
+  hero: (
+    bg: #0b0a27,
+    color: #fff,
+  ),
+  button: (
+    bg: none,
+    color: #fff,
+    border-color: #fff,
+  ),
+  avatar: (
+    blend-mode: soft-light,
+  ),
+);
+
+@include themable(theme-dark, $theme-dark);

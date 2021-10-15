@@ -1,0 +1,19 @@
+$theme-light: (
+  section: (
+    color: #0b0a27,
+  ),
+  hero: (
+    bg: #fff,
+    color: #0b0a27,
+  ),
+  button: (
+    bg: #0b0a27,
+    color: #fff,
+    border-color: #fff,
+  ),
+  avatar: (
+    blend-mode: hard-light,
+  ),
+);
+
+@include themable(theme-light, $theme-light);
