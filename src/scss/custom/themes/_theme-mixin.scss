@@ -14,7 +14,7 @@
           border-color: map-get($map, border-color);
         }
       } @else if($section == avatar) {
-        ##{$section} {
+        .#{$section} {
           mix-blend-mode: map-get($map, blend-mode);
         }
       } @else {

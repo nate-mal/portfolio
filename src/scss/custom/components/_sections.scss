@@ -5,13 +5,32 @@ section {
   min-height: 100vh;
   transition: all 0.4s ease-in-out;
 }
+#hero {
+  .row {
+    min-height: 100vh;
+  }
+  .hero-text-group {
+    margin: 5rem 0;
+    z-index: 1000;
+  }
+}
 
 //::::::Hero Section::::::::::::::::::://
-
 #avatar {
+  position: relative;
+}
+.avatar {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   max-height: 100vh;
   max-width: 100%;
+  user-select: none;
+}
+.logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  width: 100px;
 }
