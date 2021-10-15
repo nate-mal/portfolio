@@ -9,6 +9,9 @@ section {
 //::::::Hero Section::::::::::::::::::://
 
 #avatar {
+  position: absolute;
+  top: 0;
+  right: 0;
   max-height: 100vh;
   max-width: 100%;
 }
