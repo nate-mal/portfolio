@@ -2,15 +2,21 @@
   .#{$theme-name} {
     // Loop through each of the keys (sections)
     @each $section, $map in $theme-map {
-      @if ($section == section) {
-        section {
+      @if ($section == body) {
+        body {
           background-color: map-get($map, bg);
-          color: map-get($map, bg);
+          color: map-get($map, color);
+        }
+        .navbar-custom {
+          background-color: map-get($map, bg);
+          .link {
+            color: map-get($map, color);
+          }
         }
       } @else if($section == button) {
         .#{$section} {
           background-color: map-get($map, bg);
-          color: map-get($map, bg);
+          color: map-get($map, color);
           border-color: map-get($map, border-color);
         }
       } @else if($section == avatar) {
