@@ -1,4 +1,13 @@
 //custom navigaiton
+
+.navbar-custom {
+  height: 50px;
+  transition: height 0.6s ease-in-out;
+}
+.navbar-custom.full-screen {
+  height: 100vh;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Freehand&display=swap");
 .navbar-brand {
   font-family: "Freehand", cursive;
