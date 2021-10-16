@@ -3,13 +3,4 @@ import * as bootstrap from "bootstrap";
 
 import component from "./component.js";
 import images from "./images.js";
-
-document.getElementById("avatar").addEventListener("click", () => {
-  if (document.querySelector("body").classList.contains("theme-dark")) {
-    document.querySelector("body").classList.remove("theme-dark");
-    document.querySelector("body").classList.add("theme-light");
-  } else {
-    document.querySelector("body").classList.remove("theme-light");
-    document.querySelector("body").classList.add("theme-dark");
-  }
-});
+import navigation from "./navigation";

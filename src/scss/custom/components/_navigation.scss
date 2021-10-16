@@ -4,24 +4,71 @@
   font-family: "Freehand", cursive;
   font-size: 3rem;
   &:hover {
-    color: $main-hover-color;
+    color: $main-hover-color !important;
   }
 }
 
-.link {
+.custom-nav-link {
   padding: 1rem 1rem 2rem 1rem;
-  margin: 0 1rem 0 1rem;
+  margin: 0 0.5rem 0 0.5rem;
   border-radius: 0 0 5px 5px;
 
   &:hover {
     background-color: $main-hover-color;
     color: #fff !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     cursor: pointer;
   }
   &:focus {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     opacity: 0.9;
+  }
+}
+
+///hamburger button
+.hamburger-label {
+  & {
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+    cursor: pointer;
+  }
+
+  span {
+    border-radius: 10px;
+    height: 7px;
+    margin: 7px 0;
+    transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+
+  span:nth-of-type(1) {
+    width: 50%;
+  }
+
+  span:nth-of-type(2) {
+    width: 100%;
+  }
+
+  span:nth-of-type(3) {
+    width: 75%;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+    transform-origin: bottom;
+    transform: rotatez(45deg) translate(8px, 0px);
+  }
+
+  input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+    transform-origin: top;
+    transform: rotatez(-45deg);
+  }
+
+  input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+    transform-origin: bottom;
+    width: 50%;
+    transform: translate(30px, -11px) rotatez(45deg);
   }
 }
