@@ -1,11 +1,41 @@
 //custom navigaiton
 
 .navbar-custom {
-  height: 50px;
+  height: 75px;
+  transition: $main-transition !important;
   transition: height 0.6s ease-in-out;
+  overflow: hidden;
+  @include media-breakpoint-up(md) {
+    overflow: visible;
+  }
 }
 .navbar-custom.full-screen {
   height: 100vh;
+  .custom-nav-group {
+    opacity: 1;
+    .custom-nav-link {
+      padding: 1rem;
+      margin: 1rem;
+      @include media-breakpoint-up(md) {
+        margin: 0 2rem;
+      }
+      border-radius: 5px;
+    }
+  }
+}
+
+.custom-nav-group {
+  transition: opacity 0.6s ease-in-out;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include media-breakpoint-up(md) {
+    display: static;
+    opacity: 1;
+  }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Freehand&display=swap");
@@ -18,6 +48,8 @@
 }
 
 .custom-nav-link {
+  transition: margin 0.4s cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
+  transition: padding 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
   padding: 1rem 1rem 2rem 1rem;
   margin: 0 0.5rem 0 0.5rem;
   border-radius: 0 0 5px 5px;
@@ -31,6 +63,11 @@
   &:focus {
     opacity: 0.9;
   }
+}
+.custom-nav-link.active {
+  background-color: $main-hover-color;
+  color: #fff !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 ///hamburger button

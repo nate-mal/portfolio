@@ -3,3 +3,8 @@
 @import "~bootstrap/scss/bootstrap";
 
 @import "./custom/custom.scss";
+
+//bootstrap-reset
+.nav-link {
+  all: none;
+}

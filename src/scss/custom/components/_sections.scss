@@ -3,7 +3,7 @@
 ::::::::::::::::::::::::::::::::::::*/
 section {
   min-height: 100vh;
-  transition: all 0.4s ease-in-out;
+  transition: $main-transition;
 }
 #hero {
   .row {
@@ -16,9 +16,11 @@ section {
 }
 
 //::::::Hero Section::::::::::::::::::://
+
 #avatar {
   position: relative;
 }
+
 .avatar {
   position: absolute;
   bottom: 0;
@@ -33,4 +35,18 @@ section {
   right: 0;
   padding: 1rem;
   width: 100px;
+  z-index: 1000;
+}
+
+.path {
+  stroke-dasharray: 1700;
+  stroke-dashoffset: 3200;
+  animation: dash 6s linear forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
