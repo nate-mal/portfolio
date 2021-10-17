@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].js",
-    assetModuleFilename: "[name][ext]",
+    assetModuleFilename: "[name].[contenthash][ext]",
     clean: true,
   },
   devtool: "inline-source-map",

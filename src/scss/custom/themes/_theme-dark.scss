@@ -38,4 +38,7 @@ $theme-dark: (
     box-shadow: 0 14px 28px rgba(143, 125, 125, 0.25),
       0 10px 10px rgba(165, 146, 146, 0.22);
   }
+  .portfolio-image:hover {
+    border: solid 1px rgba(165, 146, 146, 0.22);
+  }
 }

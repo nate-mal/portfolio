@@ -95,9 +95,6 @@ section {
   border-radius: 5px;
   cursor: pointer;
 }
-.portfolio-image:hover {
-  border: solid 1px rgba(165, 146, 146, 0.22);
-}
 
 .menu {
   box-sizing: unset;
@@ -109,6 +106,7 @@ section {
 .show {
   .menu:hover {
     color: $main-hover-color;
+    cursor: pointer;
   }
 
   .menu {
@@ -117,8 +115,12 @@ section {
   }
 
   .portfolio-item {
-    visibility: none;
+    display: none;
     opacity: 0;
     transform: scale(0);
   }
+}
+
+.portfolio-show-item {
+  width: 100%;
 }
