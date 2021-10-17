@@ -43,7 +43,8 @@ function generateGallery() {
   desktopImagesPath.forEach((path) => {
     let image = document.createElement("img");
     image.classList.add("portfolio-image");
-    const imageWrapper = document.createElement("div");
+    const imageWrapper = document.createElement("a");
+    imageWrapper.href = "#none";
     imageWrapper.classList.add(
       "portfolio-item",
       "col-12",
@@ -62,20 +63,16 @@ function watchPortfolio() {
   portfolio.addEventListener("click", (e) => {
     const portfolioContent = portfolio.querySelectorAll(".portfolio-item");
     function hideItems() {
-      portfolioContent.forEach((item) => {
+      if (portfolio.classList.contains("show"))
         portfolio.classList.remove("show");
+      portfolioContent.forEach((item) => {
         item.classList.remove("selected");
-        item.style.display = "none";
-        item.style.opacity = "0";
       });
       portfolio.classList.add("show");
     }
     function showItems() {
       portfolioContent.forEach((item) => {
-        portfolio.classList.remove("show");
         item.classList.remove("selected");
-        item.style.display = "block";
-        item.style.opacity = "1";
       });
       portfolio.classList.remove("show");
     }
@@ -84,8 +81,6 @@ function watchPortfolio() {
       hideItems();
       const selectedItem = e.target.parentNode;
       selectedItem.classList.add("selected");
-      selectedItem.style.display = "block";
-      selectedItem.style.opacity = "1";
     } else if (e.target.classList.contains("menu")) {
       showItems();
     }
