@@ -1,14 +1,20 @@
+$dark-mode-background: $dark-mode-background;
+
 $theme-light: (
   body: (
     bg: #fff,
-    color: #0b0a27,
+    color: $dark-mode-background,
   ),
   hero: (
     bg: #fff,
-    color: #0b0a27,
+    color: $dark-mode-background,
+  ),
+  portfolio: (
+    bg: #fff,
+    color: $dark-mode-background,
   ),
   button: (
-    bg: #0b0a27,
+    bg: $dark-mode-background,
     color: #fff,
     border-color: #fff,
   ),
@@ -20,7 +26,8 @@ $theme-light: (
 @include themable(theme-light, $theme-light);
 
 .theme-light {
-  .custom-nav-link:hover {
+  .custom-nav-link:hover,
+  .portfolio-image:hover {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
   .custom-nav-link:focus {
