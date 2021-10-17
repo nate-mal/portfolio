@@ -15,6 +15,21 @@ section {
   }
 }
 
+//expand find-me section {
+
+.find-me {
+  * {
+    transition: margin 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    pointer-events: none;
+  }
+}
+.find-me.expand {
+  * {
+    margin-right: 1rem;
+    pointer-events: visible;
+  }
+}
+
 //::::::Hero Section::::::::::::::::::://
 
 #avatar {
