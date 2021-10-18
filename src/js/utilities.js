@@ -25,4 +25,16 @@ function setImageAll(images, path, alt = "", callback = () => {}) {
   });
 }
 
-export { setImage, setImageAll };
+class PortfolioItem {
+  constructor(id, desktopUrl, mobileUrl, title, bodyText, siteUrl, sourceUrl) {
+    this.id = id;
+    this.desktopUrl = desktopUrl;
+    this.mobileUrl = mobileUrl;
+    this.title = title;
+    this.bodyText = bodyText;
+    this.siteUrl = siteUrl;
+    this.sourceUrl = sourceUrl;
+  }
+}
+
+export { setImage, setImageAll, PortfolioItem };
