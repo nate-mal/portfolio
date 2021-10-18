@@ -1,11 +1,37 @@
 import { setImage, setImageAll } from "./utilities.js";
-import empDirDesktop from "../img/portfolio/employee-directory/desktop.png";
-import empDirMObile from "../img/portfolio/employee-directory/mobile-1.jpg";
-import webAppDesktop from "../img/portfolio/web-app/desktop.png";
+import empDirDesktop from "../img/portfolio/emp-dir/desktop.jpg";
+import empDirMObile from "../img/portfolio/emp-dir/mobile-1.jpg";
+// :::::::::::::::::::::::::::::
+import gameShowAppDesktop from "../img/portfolio/game-show-app/desktop.jpg";
+import gameShowAppMobile from "../img/portfolio/game-show-app/mobile-1.jpg";
+// :::::::::::::::::::::::::::::::
+import onlineFormDesktop from "../img/portfolio/online-form/desktop.jpg";
+import onlineFormMobile from "../img/portfolio/online-form/mobile-1.jpg";
+// ::::::::::::::::::::::::::::::
+import photoGalleryDesktop from "../img/portfolio/photo-gallery/desktop.jpg";
+import photoGalleryMobile from "../img/portfolio/photo-gallery/mobile-1.jpg";
+// ::::::::::::::::::::::::::::::::
+import portfolioDarkDesktop from "../img/portfolio/portfolio/desktop-dark.jpg";
+import portfolioLightMobile from "../img/portfolio/portfolio/mobile-1-light.jpg";
+// ::::::::::::::::::::::::::::::::
+import responsiveLayoutDesktop from "../img/portfolio/responsive-layout/desktop.jpg";
+import responsiveLayoutMobile from "../img/portfolio/responsive-layout/mobile-1.jpg";
+// ::::::::::::::::::::::::::::::::
+import webAppDesktop from "../img/portfolio/web-app/desktop.jpg";
+import webAppMobile from "../img/portfolio/web-app/mobile-1.jpg";
 
 let portfolioImgObj = [
   { id: 0, desktopUrl: empDirDesktop, mobileUrl: empDirMObile },
-  { id: 1, desktopUrl: webAppDesktop, mobileUrl: webAppDesktop },
+  { id: 1, desktopUrl: gameShowAppDesktop, mobileUrl: gameShowAppMobile },
+  { id: 2, desktopUrl: onlineFormDesktop, mobileUrl: onlineFormMobile },
+  { id: 3, desktopUrl: photoGalleryDesktop, mobileUrl: photoGalleryMobile },
+  { id: 4, desktopUrl: portfolioDarkDesktop, mobileUrl: portfolioLightMobile },
+  {
+    id: 5,
+    desktopUrl: responsiveLayoutDesktop,
+    mobileUrl: responsiveLayoutMobile,
+  },
+  { id: 6, desktopUrl: webAppDesktop, mobileUrl: webAppDesktop },
 ];
 
 const portfolio = document.getElementById("portfolio");
