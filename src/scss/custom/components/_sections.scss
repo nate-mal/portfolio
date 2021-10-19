@@ -71,6 +71,7 @@ section {
 ::::::::::::::::::::::::::::::::::::*/
 
 #portfolio {
+  padding: 80px 0;
   @include media-breakpoint-up(md) {
     padding-top: 120px;
   }
@@ -110,18 +111,27 @@ section {
   position: relative;
   padding: 0;
   margin: 0;
-  .menu {
-    padding: 0;
+  .hero-text-group {
+    transform: perspective(700px);
+  }
+}
+.command-panel {
+  display: flex;
+  position: sticky;
+  top: 10%;
+  z-index: 100;
+  padding: 0 1rem;
+  margin: 1rem 0;
+  .command-btn {
     height: 50px;
     width: 50px;
-    position: sticky;
-    top: 12%;
-    right: 10%;
-    z-index: 100;
   }
-  .menu:hover {
+  .command-btn:hover {
     color: $main-hover-color;
     cursor: pointer;
+  }
+  .menu {
+    margin-right: auto;
   }
 }
 
@@ -130,7 +140,7 @@ section {
   align-items: center;
   justify-content: center;
   img {
-    max-height: 50vh;
+    max-width: auto;
     width: auto;
     max-width: 100%;
     margin: 1rem;
@@ -139,31 +149,37 @@ section {
 }
 // #isometric
 
-.portfolio-show-item.mobile {
+.portfolio-show-item.mobile img {
+  max-height: 300px;
+  @include media-breakpoint-up(lg) {
+    max-height: 400px;
+  }
+
   animation: perspectiveMobile 0.5s linear forwards;
   animation-iteration-count: 1;
 }
 
-.portfolio-show-item.desktop {
-  animation: perspectiveDesktop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-    0.6s forwards;
-  animation-iteration-count: 1;
-  @include media-breakpoint-up(sm) {
-    animation: perspectiveDesktop 3s ease-in-out 0.3s forwards;
+.portfolio-show-item.desktop img {
+  width: 600px;
+  max-width: 80%;
+  height: auto;
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    transform: translatex(-200%);
   }
+  animation: perspectiveDesktop 3s ease-in-out 0.3s forwards;
+  animation-iteration-count: 1;
 }
 
 @keyframes perspectiveMobile {
   to {
-    transform: perspective(600px) rotateX(0deg) rotateY(-5deg) rotateZ(5deg);
+    transform: perspective(700px) rotateX(0deg) rotateY(-5deg) rotateZ(5deg);
   }
 }
 @keyframes perspectiveDesktop {
   to {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%) perspective(600px) rotateX(60deg)
-      rotateY(0deg) rotateZ(-45deg);
+    transform: perspective(700px) rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
   }
 }

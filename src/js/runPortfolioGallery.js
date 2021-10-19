@@ -1,9 +1,4 @@
-import {
-  generateGallery,
-  watchPortfolio,
-  showSelectedItem,
-  PortfolioItem,
-} from "./portfolio-gallery";
+import { runGallery, PortfolioItem } from "./portfolio-gallery";
 
 import empDirDesktop from "../img/portfolio/emp-dir/desktop.jpg";
 import empDirMObile from "../img/portfolio/emp-dir/mobile-1.jpg";
@@ -93,7 +88,7 @@ const webAppObj = new PortfolioItem(
   webAppMobile,
   "About this project",
   [
-    'Many websites do more than just give you information. Sites like GitHub, Zillow, Mint and Facebook let users do things. They act like programs you run on your computer. These web applications, often include pages for looking at your profile, what you\'ve done in the week or what you need to get done. These "dashboards" act like your control panel for controlling the web app.',
+    "Many websites do more than just give you information. Sites like GitHub, Zillow, Mint and Facebook let users do things. They act like programs you run on your computer. These web applications, often include pages for looking at your profile, what you've done in the week or what you need to get done.",
     "In this project I’ve  took  a mockup and a few icons and built a beautiful, web dashboard complete with JavaScript-driven charts and graphs. ",
   ],
 
@@ -108,5 +103,4 @@ portfolioImgObj.push(photoGalleryObj);
 portfolioImgObj.push(responsiveLayoutObj);
 portfolioImgObj.push(webAppObj);
 
-export { portfolioImgObj };
-generateGallery().then(watchPortfolio(showSelectedItem));
+runGallery("#portfolio", portfolioImgObj);
