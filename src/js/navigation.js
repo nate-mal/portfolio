@@ -72,3 +72,31 @@ customNavGroup.addEventListener("click", (e) => {
     }
   }
 });
+
+try {
+  function syncBrandName(mutationsList) {
+    waitForScrollEnd().then(() => {
+      mutationsList.forEach((mutation) => {
+        if (mutation.attributeName === "class") {
+          const customLinks = document.querySelectorAll(".custom-nav-link");
+
+          customLinks.forEach((link) => {
+            if (link.classList.contains("active")) {
+              const brandName = document.querySelector(".navbar-brand");
+              brandName.textContent = link.textContent;
+            }
+          });
+        }
+      });
+    });
+  }
+
+  const mutationObserverNav = new MutationObserver(syncBrandName);
+  mutationObserverNav.observe(document.querySelector(".custom-nav-group"), {
+    attributes: true,
+    childList: true,
+    subtree: true,
+  });
+} catch (e) {
+  console.error("navigation error: ", e.message);
+}
