@@ -13,6 +13,10 @@ $theme-light: (
     bg: #fff,
     color: $dark-mode-background,
   ),
+  about: (
+    bg: #fff,
+    color: $dark-mode-background,
+  ),
   button: (
     bg: $dark-mode-background,
     color: #fff,
@@ -45,5 +49,8 @@ $theme-light: (
   .portfolio-image:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     opacity: 0.9;
+  }
+  .avatar-about {
+    mix-blend-mode: unset;
   }
 }

@@ -32,7 +32,7 @@ section {
 
 //::::::Hero Section::::::::::::::::::://
 
-#avatar {
+.avatar-wrapper {
   position: relative;
 }
 
@@ -48,9 +48,19 @@ section {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 1rem;
-  width: 100px;
-  z-index: 1000;
+  width: 70px;
+  margin: 1rem;
+  z-index: 100;
+}
+.logo-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  @include media-breakpoint-up(md) {
+    width: 70px;
+  }
+  z-index: 1000000;
 }
 
 .path {
@@ -81,7 +91,6 @@ section {
     }
   }
 }
-
 .portfolio-item {
   transition: transform, opacity 0.6s ease-in-out;
   margin: 1rem 0;
@@ -181,5 +190,33 @@ section {
 @keyframes perspectiveDesktop {
   to {
     transform: perspective(700px) rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+  }
+}
+
+// :::::::::::::::::::::::
+//About me
+// :::::::::::::::::::::::
+
+#about {
+  padding-top: 100px;
+  .row {
+    min-height: 100vh;
+  }
+  .hero-text-group {
+    margin: 5rem 0;
+    z-index: 1000;
+  }
+  #avatar-about {
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    .avatar-about {
+      top: 30%;
+      margin-bottom: 2rem;
+      position: sticky;
+      width: 400px;
+      height: auto;
+      max-height: 500px;
+    }
   }
 }
