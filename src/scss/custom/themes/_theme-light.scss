@@ -1,30 +1,30 @@
 $dark-mode-background: $dark-mode-background;
-
+$light-mode-background: $light-mode-background;
 $theme-light: (
   body: (
-    bg: #fff,
+    bg: $light-mode-background,
     color: $dark-mode-background,
   ),
   hero: (
-    bg: #fff,
+    bg: $light-mode-background,
     color: $dark-mode-background,
   ),
   portfolio: (
-    bg: #fff,
+    bg: $light-mode-background,
     color: $dark-mode-background,
   ),
   about: (
-    bg: #fff,
+    bg: $light-mode-background,
     color: $dark-mode-background,
   ),
   contact: (
-    bg: #fff,
+    bg: $light-mode-background,
     color: $dark-mode-background,
   ),
   button: (
     bg: $dark-mode-background,
-    color: #fff,
-    border-color: #fff,
+    color: $light-mode-background,
+    border-color: $light-mode-background,
   ),
   avatar: (
     blend-mode: hard-light,
@@ -56,5 +56,9 @@ $theme-light: (
   }
   .avatar-about {
     mix-blend-mode: unset;
+  }
+  footer {
+    background-color: darken($color: $light-mode-background, $amount: 3);
+    color: $dark-mode-background;
   }
 }

@@ -50,6 +50,11 @@ module.exports = {
       filename: "index.html",
       template: path.resolve(__dirname, "src/temp.html"),
     }),
+    new HtmlWebpackPlugin({
+      title: "Thank you page",
+      filename: "thanks.html",
+      template: path.resolve(__dirname, "src/pages/thanks-page.html"),
+    }),
     new MiniCssExtractPlugin(),
   ],
 };

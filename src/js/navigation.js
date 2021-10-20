@@ -1,14 +1,22 @@
+const body = document.querySelector("body");
+
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ///dark mode switcher
 const darkMode = document.getElementById("switch-theme");
-const body = document.querySelector("body");
-if (darkMode.checked) {
-  body.classList.remove("theme-light");
-  body.classList.add("theme-dark");
-} else {
-  body.classList.remove("theme-dark");
-  body.classList.add("theme-light");
+//display saved settings if any
+function displaySavedSettings(settingsData) {
+  darkMode.checked = settingsData["darkMode"];
+  //change to darkmode if checked
+  if (darkMode.checked) {
+    body.classList.remove("theme-light");
+    body.classList.add("theme-dark");
+  } else {
+    body.classList.remove("theme-dark");
+    body.classList.add("theme-light");
+  }
 }
 
+//add an event listner
 darkMode.addEventListener("change", (e) => {
   if (darkMode.checked) {
     body.classList.remove("theme-light");
@@ -17,8 +25,25 @@ darkMode.addEventListener("change", (e) => {
     body.classList.remove("theme-dark");
     body.classList.add("theme-light");
   }
+  const settingsData = {};
+  settingsData.darkMode = darkMode.checked;
+  pushSettingsToLocalStorage(settingsData);
 });
 
+//set default
+const defaultSettingsData = {
+  darkMode: false,
+};
+function pushSettingsToLocalStorage(settingsDataToPush) {
+  localStorage.setItem("settingsData", JSON.stringify(settingsDataToPush));
+}
+if (!localStorage.getItem("settingsData")) {
+  pushSettingsToLocalStorage(defaultSettingsData);
+}
+window.onload = () => {
+  displaySavedSettings(JSON.parse(localStorage.getItem("settingsData")));
+};
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //hamburger button
 const hamb = document.getElementById("hamburger-button");
 const mainNav = document.querySelector("#navbar-main");

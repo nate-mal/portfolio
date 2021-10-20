@@ -1,29 +1,30 @@
-$dark-mode-background: #0b0a27; ///change the background mode from here
+$dark-mode-background: $dark-mode-background; ///change the background mode from here
+$light-mode-background: $light-mode-background;
 $theme-dark: (
   body: (
     bg: $dark-mode-background,
-    color: #fff,
+    color: $light-mode-background,
   ),
   hero: (
     bg: $dark-mode-background,
-    color: #fff,
+    color: $light-mode-background,
   ),
   portfolio: (
     bg: $dark-mode-background,
-    color: #fff,
+    color: $light-mode-background,
   ),
   about: (
     bg: $dark-mode-background,
-    color: #fff,
+    color: $light-mode-background,
   ),
   contact: (
     bg: $dark-mode-background,
-    color: #fff,
+    color: $light-mode-background,
   ),
   button: (
     bg: none,
-    color: #fff,
-    border-color: #fff,
+    color: $light-mode-background,
+    border-color: $light-mode-background,
   ),
   avatar: (
     blend-mode: soft-light,
@@ -34,7 +35,7 @@ $theme-dark: (
 
 #switch-theme:checked {
   background-color: $dark-mode-background !important;
-  border-color: #fff !important;
+  border-color: $light-mode-background !important;
 }
 .theme-dark {
   .portfolio-image .portfolio-show-item img {
@@ -56,5 +57,10 @@ $theme-dark: (
     box-shadow: 0 14px 28px rgba(219, 207, 207, 0.25),
       0 10px 10px rgba(247, 221, 221, 0.22);
     opacity: 0.9;
+  }
+  footer {
+    background-color: lighten($color: $dark-mode-background, $amount: 3);
+    color: $light-mode-background;
+    // border-top: 0.3px solid $light-mode-background;
   }
 }

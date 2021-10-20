@@ -29,19 +29,40 @@ heroTexts.forEach((heroText) => {
 //   console.log("Mutations:", mutationsList);
 //   console.log("Observer:", observer);
 // }
+
+const logo = document.querySelector(".logo");
 function hookLogo(mutationsList) {
   mutationsList.forEach((mutation) => {
     if (mutation.attributeName === "class") {
       if (document.querySelector(".hook-logo").classList.contains("active")) {
-        document.querySelector(".logo").classList.remove("logo-fixed");
-      } else {
-        document.querySelector(".logo").classList.add("logo-fixed");
+        logo.classList.remove("logo-fixed");
+      } else if (!logo.classList.contains("logo-fixed")) {
+        logo.classList.add("logo-fixed");
       }
     }
   });
 }
 const mutationObserver = new MutationObserver(hookLogo);
 mutationObserver.observe(document.querySelector(".hook-logo"), {
+  attributes: true,
+});
+function hookLogoFooter(mutationsList) {
+  mutationsList.forEach((mutation) => {
+    if (mutation.attributeName === "class") {
+      if (
+        document.querySelector(".hook-logo-footer").classList.contains("active")
+      ) {
+        logo.classList.add("logo-hide");
+      } else {
+        logo.classList.remove("logo-hide");
+        if (!logo.classList.contains("logo-fixed"))
+          logo.classList.add("logo-fixed");
+      }
+    }
+  });
+}
+const mutationObserverFooter = new MutationObserver(hookLogoFooter);
+mutationObserverFooter.observe(document.querySelector(".hook-logo-footer"), {
   attributes: true,
 });
 

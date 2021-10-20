@@ -62,6 +62,9 @@ section {
   }
   z-index: 1000000;
 }
+.logo-hide {
+  opacity: 0;
+}
 
 .path {
   stroke-dasharray: 1700;
@@ -227,6 +230,7 @@ section {
 // :::::::::::::::::::::::
 
 #contact {
+  padding-top: 90px;
   form {
     width: 90%;
     @include media-breakpoint-up(md) {
@@ -239,4 +243,13 @@ section {
       width: 40%;
     }
   }
+}
+
+//footer
+.logoBottom {
+  width: 50px;
+}
+.danger,
+.logoBottom {
+  color: $main-hover-color;
 }
