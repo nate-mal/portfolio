@@ -1,9 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
+plugins: [
+  new FaviconsWebpackPlugin("/path/to/logo.png"), // svg works too!
+];
 module.exports = {
-  mode: "production", //production
+  mode: "development", //production
   entry: {
     main: path.resolve(__dirname, "src/js/app.js"),
   },
@@ -55,6 +59,7 @@ module.exports = {
       filename: "thanks.html",
       template: path.resolve(__dirname, "src/pages/thanks-page.html"),
     }),
+    new FaviconsWebpackPlugin("src/img/favicon.png"), //works with svg too
     new MiniCssExtractPlugin(),
   ],
 };
