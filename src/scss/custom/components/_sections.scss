@@ -253,3 +253,11 @@ section {
 .logoBottom {
   color: $main-hover-color;
 }
+
+.badge {
+  margin-left: auto;
+  svg {
+    height: 40px;
+    width: auto;
+  }
+}
