@@ -7,7 +7,7 @@ plugins: [
   new FaviconsWebpackPlugin("/path/to/logo.png"), // svg works too!
 ];
 module.exports = {
-  mode: "development", //production
+  mode: "production", //production
   entry: {
     main: path.resolve(__dirname, "src/js/app.js"),
   },
