@@ -74,8 +74,8 @@ function runGallery(gallerySelector, portfolioObjectItems) {
     );
     showDescriptionWrapper.innerHTML = generateShowDescription(
       selectedItem.title,
-      selectedItem.bodyText[0],
-      selectedItem.bodyText[1],
+      selectedItem.bodyText,
+      // selectedItem.bodyText[1],
       selectedItem.siteUrl,
       selectedItem.sourceUrl
     );
@@ -117,17 +117,18 @@ function runGallery(gallerySelector, portfolioObjectItems) {
     } else slideRight.style.display = "none";
   }
 
-  function generateShowDescription(title, firstP, secondP, siteUrl, sourceUrl) {
+  function generateShowDescription(title, paragraphs, siteUrl, sourceUrl) {
     const description = `
- <div class="d-flex flex-column justify-content-lg-center my-5 hero-text-group">
+ <div class="d-flex flex-column justify-content-lg-center mt-2 mb-5 hero-text-group" style="z-index: 999;">
               <h1 class="display-5">${title}</h1>
-              <p class="lead">
-                ${firstP}
-              </p>
-              <p class="lead">
-                ${secondP}
-              </p>
-
+               <p class="lead">${paragraphs[0]}</p>
+               <p class="lead">${paragraphs.length > 1 ? paragraphs[1] : ""}</p>
+               <p class="lead">${paragraphs.length > 2 ? paragraphs[2] : ""}</p>
+               <p class="lead">${paragraphs.length > 3 ? paragraphs[3] : ""}</p>
+               <p class="lead">${paragraphs.length > 4 ? paragraphs[4] : ""}</p>
+               <p class="lead">${paragraphs.length > 5 ? paragraphs[5] : ""}</p>
+               <p class="lead">${paragraphs.length > 6 ? paragraphs[6] : ""}</p>
+              
               <div
                 class="
                   d-flex
@@ -158,8 +159,11 @@ function runGallery(gallerySelector, portfolioObjectItems) {
                     View Source
               </a>
                 </div>
+                <div style="height:7em"></div>
               </div>
+              
               </div>
+             
               `;
     return description;
   }

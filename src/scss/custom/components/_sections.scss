@@ -43,7 +43,53 @@ section {
   max-height: 100vh;
   max-width: 100%;
   user-select: none;
+  animation:animate .2s linear infinite;
 }
+
+.avatar-glitch{
+  position:relative;
+  width:100%;
+  // margin-top: 4vh;
+  background-repeat: no-repeat;
+  height: 400px;
+  @include media-breakpoint-up(sm) {
+    height: 500px;
+  }
+  @include media-breakpoint-up(md) {
+  margin-top: 10vh;
+
+    height: 600px;
+  }
+  @include media-breakpoint-up(xl) {
+  margin-top: 10vh;
+
+    height: 750px;
+  }
+  background: url(https://res.cloudinary.com/dn8x58pda/image/upload/v1683127920/profile-cut_vxxqc4.png);
+  background-size:100%;
+}
+.avatar-glitch:before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: url(https://res.cloudinary.com/dn8x58pda/image/upload/v1683127920/profile-cut_vxxqc4.png);
+  background-size:100%;
+  opacity:.5;
+  mix-blend-mode:hard-light;
+  // animation:animate .2s linear infinite;
+}
+.avatar-glitch:hover::before{
+  animation:animate .2s linear infinite;
+}
+
+
+
+
+
+
 .logo {
   position: absolute;
   bottom: 0;
@@ -79,6 +125,44 @@ section {
   }
 }
 
+
+@keyframes animate{
+	0%{
+	background-position: 0 0;
+	filter:hue-rotate(0deg);
+	}
+	10%{
+	background-position: 5px 0;
+	}
+	20%{
+	background-position: -5px 0;
+	}
+	30%{
+	background-position: 15px 0;
+	}
+	40%{
+	background-position: 5px 0;
+	}
+	50%{
+	background-position: -25px 0;
+	}
+	60%{
+	background-position: -50px 0;
+	}
+	70%{
+	background-position: 0 -20px;
+	}
+	80%{
+	background-position: -60px -20px;
+	}
+	81%{
+	background-position: 0 0;
+	}
+	100%{
+	background-position: 0 0;
+	filter:hue-rotate(360deg);
+	}
+}
 /*:::::::::::::::::::::::::::::
        portfolio
 ::::::::::::::::::::::::::::::::::::*/
@@ -179,7 +263,7 @@ section {
     position: absolute;
     top: 70%;
     left: 25%;
-    transform: translatex(-200%);
+    transform: translatex(-250%);
   }
   animation: perspectiveDesktop 3s ease-in-out 0.3s forwards;
   animation-iteration-count: 1;
