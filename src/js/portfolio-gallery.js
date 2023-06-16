@@ -119,7 +119,7 @@ function runGallery(gallerySelector, portfolioObjectItems) {
 
   function generateShowDescription(title, paragraphs, siteUrl, sourceUrl) {
     const description = `
- <div class="d-flex flex-column justify-content-lg-center mt-2 mb-5 hero-text-group" style="z-index: 999;">
+ <div class="d-flex flex-column justify-content-lg-center mt-2 mb-5 hero-text-group" style="z-index: 9;">
               <h1 class="display-5">${title}</h1>
                <p class="lead">${paragraphs[0]}</p>
                <p class="lead">${paragraphs.length > 1 ? paragraphs[1] : ""}</p>
