@@ -1,37 +1,37 @@
 import { runGallery, PortfolioItem } from "./portfolio-gallery";
 
-import empDirDesktop from "../img/portfolio/emp-dir/desktop.jpg";
-import empDirMObile from "../img/portfolio/emp-dir/mobile-1.jpg";
+import empDirDesktop from "../img/portfolio/emp-dir/desktop.webp";
+import empDirMObile from "../img/portfolio/emp-dir/mobile-1.webp";
 // :::::::::::::::::::::::::::::
-import gameShowAppDesktop from "../img/portfolio/game-show-app/desktop.jpg";
-import gameShowAppMobile from "../img/portfolio/game-show-app/mobile-1.jpg";
+import gameShowAppDesktop from "../img/portfolio/game-show-app/desktop.webp";
+import gameShowAppMobile from "../img/portfolio/game-show-app/mobile-1.webp";
 // :::::::::::::::::::::::::::::::
-import onlineFormDesktop from "../img/portfolio/online-form/desktop.jpg";
-import onlineFormMobile from "../img/portfolio/online-form/mobile-1.jpg";
+import onlineFormDesktop from "../img/portfolio/online-form/desktop.webp";
+import onlineFormMobile from "../img/portfolio/online-form/mobile-1.webp";
 // ::::::::::::::::::::::::::::::
-import photoGalleryDesktop from "../img/portfolio/photo-gallery/desktop.jpg";
-import photoGalleryMobile from "../img/portfolio/photo-gallery/mobile-1.jpg";
+import photoGalleryDesktop from "../img/portfolio/photo-gallery/desktop.webp";
+import photoGalleryMobile from "../img/portfolio/photo-gallery/mobile-1.webp";
 // ::::::::::::::::::::::::::::::::
-import portfolioDarkDesktop from "../img/portfolio/portfolio/desktop-dark.jpg";
-import portfolioLightMobile from "../img/portfolio/portfolio/mobile-1-light.jpg";
+import portfolioDarkDesktop from "../img/portfolio/portfolio/desktop-dark.webp";
+import portfolioLightMobile from "../img/portfolio/portfolio/mobile-1-light.webp";
 // ::::::::::::::::::::::::::::::::
-import responsiveLayoutDesktop from "../img/portfolio/responsive-layout/desktop.jpg";
-import responsiveLayoutMobile from "../img/portfolio/responsive-layout/mobile-1.jpg";
+import responsiveLayoutDesktop from "../img/portfolio/responsive-layout/desktop.webp";
+import responsiveLayoutMobile from "../img/portfolio/responsive-layout/mobile-1.webp";
 // ::::::::::::::::::::::::::::::::
-import nextEventDesktop from "../img/portfolio/next-events/desktop.jpg";
-import nextEventMobile from "../img/portfolio/next-events/mobile-1.jpg";
+import nextEventDesktop from "../img/portfolio/next-events/desktop.webp";
+import nextEventMobile from "../img/portfolio/next-events/mobile-1.webp";
 // ::::::::::::::::::::::::::::::::
-import webAppDesktop from "../img/portfolio/web-app/desktop.jpg";
-import webAppMobile from "../img/portfolio/web-app/mobile-1.jpg";
+import webAppDesktop from "../img/portfolio/web-app/desktop.webp";
+import webAppMobile from "../img/portfolio/web-app/mobile-1.webp";
 // ::::::::::::::::::::::::::::::::
-import artCafeDesktop from "../img/portfolio/artcafe-store/desktop.jpg";
-import artCafeMobile from "../img/portfolio/artcafe-store/mobile-1.jpg";
+import artCafeDesktop from "../img/portfolio/artcafe-store/desktop.webp";
+import artCafeMobile from "../img/portfolio/artcafe-store/mobile-1.webp";
 
-import foodMenuDesktop from "../img/portfolio/food-menu/desktop.jpg";
-import foodMenuMobile from "../img/portfolio/food-menu/mobile-1.jpg";
+import foodMenuDesktop from "../img/portfolio/food-menu/desktop.webp";
+import foodMenuMobile from "../img/portfolio/food-menu/mobile-1.webp";
 
-import blogDesktop from "../img/portfolio/blog/desktop.jpg";
-import blogMobile from "../img/portfolio/blog/mobile-1.jpg";
+import blogDesktop from "../img/portfolio/blog/desktop.webp";
+import blogMobile from "../img/portfolio/blog/mobile-1.webp";
 
 let portfolioImgObj = [];
 const artCafeObj = new PortfolioItem(
